@@ -2,6 +2,9 @@ import _ from 'lodash';
 import FormioExportUtils from '../../../../utils';
 
 export default (element, component) => {
+
+  console.log('grid component', component);
+
   if (component && component.components) {
     let componentElement = FormioExportUtils.createElement('div', {
       class: `formio-component grid-component ${component.type}-component card`,
@@ -19,6 +22,7 @@ export default (element, component) => {
     if (!transpose) {
       let headerElement = FormioExportUtils.createElement('div', { class: 'row grid-row grid-header' });
 
+      console.log('DataGrid2', component.rows[0], component);
       _.forEach(component.rows[0], (c) => {
         if (c) {
           headerElement.appendChild(FormioExportUtils.createElement('div', { class: 'col grid-cell' }, c.getLabel()));
@@ -33,6 +37,7 @@ export default (element, component) => {
           if (col) {
             let colElement = FormioExportUtils.createElement('div', { class: 'col grid-cell' });
 
+            console.log('DataGrid3', colElement, col);
             col.toHtml(colElement);
             rowElement.appendChild(colElement);
           }

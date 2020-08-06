@@ -6,6 +6,7 @@ export default (component) => {
     try {
       let container = FormioExportUtils.createElement('div', { id: 'formio__export' }, style);
 
+      console.log('toHtml', container);
       component.toHtml(container);
       resolve(container);
     } catch (error) {

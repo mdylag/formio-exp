@@ -3,6 +3,9 @@ import BaseComponent from '../base';
 
 class TextFieldComponent extends BaseComponent {
   constructor (component, data, options) {
+
+    // console.log('TextField', component, data, options);
+
     super(component, data, options);
   }
 

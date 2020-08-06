@@ -79,6 +79,7 @@ class FormioExport {
   toHtml () {
     return new Promise((resolve, reject) => {
       try {
+        console.log('toHtml', this.component);
         toHtml(this.component).then((html) => resolve(html));
       } catch (error) {
         reject(error);
@@ -96,7 +97,9 @@ class FormioExport {
   toPdf (config = {}) {
     return new Promise((resolve, reject) => {
       try {
+        console.log('toPdf1', this);
         this.toHtml().then((source) => {
+          console.log('toPdf2', source);
           toPdf(Object.assign(config, { source: source })).then((pdf) => resolve(pdf));
         });
       } catch (error) {

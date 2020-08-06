@@ -26,7 +26,12 @@ export default (element, component) => {
       }
 
       if (component._options.submission.hasOwnProperty('modified')) {
-        let date = component._options.submission.modified.replace('T', ' ').split('.')[0] + ' UTC';
+
+        let date = '';
+
+        if (component._options.submission.modified && component._options.submission.modified) {
+          date = component._options.submission.modified.replace('T', ' ').split('.')[0] + ' UTC';
+        }
 
         componentElement.appendChild(FormioExportUtils.createElement('div', { class: 'row' },
           FormioExportUtils.createElement('div', { class: 'col text-right text-bold' }, 'modified:'),

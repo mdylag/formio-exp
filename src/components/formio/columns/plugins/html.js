@@ -4,6 +4,8 @@ import FormioExportUtils from '../../../../utils';
 export default (element, component) => {
   if (component && component.columns) {
 
+    console.log('column', element, component);
+
     let componentElement = FormioExportUtils.createElement('div', {
       class: `formio-component ${component.type}-component`,
       id: Math.random().toString(36).substring(7)
