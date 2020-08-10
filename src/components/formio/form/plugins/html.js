@@ -45,6 +45,7 @@ export default (element, component) => {
     _.forEach(component.components, (c) => {
       if (c) {
         c.toHtml(componentElement);
+        componentElement.appendChild(FormioExportUtils.createElement('div', {class: 'html2pdf__page-break'}));
       }
     });
 
