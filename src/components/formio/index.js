@@ -32,9 +32,12 @@ import ColumnsComponent from './columns';
 import PanelComponent from './panel';
 import FieldSetComponent from './fieldset';
 
+import TableComponent from './table';
+
 import UnknownComponent from './unknown';
 
 import ContentComponent from 'formio-export/components/formio/content';
+import HtmlComponent from 'formio-export/components/formio/html';
 
 const FormioComponent = {
   textfield: TextFieldComponent,
@@ -65,14 +68,20 @@ const FormioComponent = {
   unknown: UnknownComponent,
   form: FormComponent,
   content: ContentComponent,
+  table: TableComponent,
+  htmlelement: HtmlComponent,
+
   create: (component, data, options) => {
     let c = null;
+
+    console.log('formioexp1', component.type, component, FormioComponent[component.type]);
 
     if (!component) {
       return null;
     } else if (FormioComponent.hasOwnProperty(component.type)) {
       c = new FormioComponent[component.type](component, data, options);
     } else {
+      console.log('formioexp2', component.type, component, FormioComponent.hasOwnProperty(component.type));
       c = new UnknownComponent(component, data, options);
     }
     return c;

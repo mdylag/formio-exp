@@ -24,7 +24,7 @@ class FormioExport {
    * @memberof FormioExport
    */
   constructor (component, data, options = {}) {
-
+    console.log('formioexp', component, data, options);
     if (!(this instanceof FormioExport)) {
       return new FormioExport(component, data);
     }

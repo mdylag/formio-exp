@@ -31,6 +31,7 @@ export default (element, component) => {
       let columnComponent = FormioExportUtils.createElement('div', { class: className });
 
       _.forEach(column.components, (comp) => {
+        console.log('column2', comp);
         comp.toHtml(component._ignoreLayout ? componentElement : columnComponent);
       });
       if (!component._ignoreLayout) {

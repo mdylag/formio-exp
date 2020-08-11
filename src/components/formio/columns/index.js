@@ -5,7 +5,6 @@ import { toHtml, getDimensions } from './plugins';
 class ColumnsComponent extends BaseComponent {
   constructor (component, data, options) {
     super(component, data, options);
-    console.log('column', component, data, options);
     if (this.columns && _.isArray(this.columns)) {
       _.forEach(this.columns, (column) => {
         let components = [];
