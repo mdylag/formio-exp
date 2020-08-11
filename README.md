@@ -170,13 +170,13 @@ git clone git@github.com:airarrazaval/formio-export.git
 Install dependencies:
 
 ```
-npm install
+yarn install
 ```
 
 Build browser bundle
 
 ```
-npm run build
+yarn run build
 ```
 
 ## Running the tests
