@@ -20,7 +20,7 @@ These instructions will get you a copy of the project up and running on your loc
 To install this package into your project, you can use the following command within your terminal
 
 ```
-npm install --save formio-export
+npm install --save formio-exp
 ```
 
 # Usage

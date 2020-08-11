@@ -2,7 +2,7 @@
   "name": "formio-exp",
   "version": "0.3.1",
   "description": "Formio Export Tools",
-  "main": "lib/formio-export.js",
+  "main": "lib/formio-exp.js",
   "directories": {
     "lib": "lib",
     "test": "test"
@@ -16,19 +16,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/airarrazaval/formio-export.git"
+    "url": "https://github.com/mdylag/formio-exp.git"
   },
   "keywords": [
     "javascript",
     "formio",
     "formiojs"
   ],
-  "author": "Alfredo Irarrazaval",
+  "author": "Miroslaw Dylag",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/airarrazaval/formio-export/issues"
+    "url": "https://github.com/mdylag/formio-exp/issues"
   },
-  "homepage": "https://github.com/airarrazaval/formio-export#readme",
+  "homepage": "https://github.com/mdylag/formio-exp#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
