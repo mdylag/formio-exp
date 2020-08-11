@@ -34,6 +34,8 @@ import FieldSetComponent from './fieldset';
 
 import UnknownComponent from './unknown';
 
+import ContentComponent from 'formio-export/components/formio/content';
+
 const FormioComponent = {
   textfield: TextFieldComponent,
   textarea: TextAreaComponent,
@@ -62,6 +64,7 @@ const FormioComponent = {
   fieldset: FieldSetComponent,
   unknown: UnknownComponent,
   form: FormComponent,
+  content: ContentComponent,
   create: (component, data, options) => {
     let c = null;
 

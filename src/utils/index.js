@@ -284,7 +284,7 @@ const FormioExportUtils = {
       }).join(';');
     }
     // check if innerHTML is defined
-    if (attributes.hasOwnProperty('innerHTML')) {
+    if (attributes.hasOwnProperty('innerHTML') || attributes.hasOwnProperty('HTML')) {
       // ...and delete the original innerHTML property
       el.innerHTML = attributes.innerHTML;
       delete attributes.innerHTML;
