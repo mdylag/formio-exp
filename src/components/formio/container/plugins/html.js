@@ -25,9 +25,6 @@ export default (element, component) => {
           c._options.equalCols = true;
         }
         c.toHtml(valueElement);
-        if (c.type === 'content') {
-          valueElement = c.toHtml(valueElement);
-        }
       }
     });
     componentElement.appendChild(valueElement);
