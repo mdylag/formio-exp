@@ -187,6 +187,20 @@ Tests use samples provided in `test/samples` and should use [Form.io's Component
 npm run test
 ```
 
+## Dev locally with npm links
+
+Checkout the html2pdf lib from https://github.com/mdylag/html2pdf
+
+```
+git clone https://github.com/mdylag/html2pdf
+``` 
+
+Link the library by running build.sh
+```
+./build.sh
+``` 
+
+
 ## Built With
 
 * [js-html2pdf](https://github.com/airarrazaval/html2pdf) - Html to Pdf javascript library
@@ -196,6 +210,7 @@ npm run test
 ## Authors
 
 * **Alfredo Irarrazaval** - *Initial work* - [airarrazaval](https://github.com/airarrazaval)
+* **Miroslaw Dylag** - *Add missing components*
 
 ## License
 

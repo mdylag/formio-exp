@@ -35,7 +35,9 @@ const config = {
       {
         test: /(\.jsx|\.js)$/,
         loader: 'babel-loader',
-        exclude: /(node_modules|bower_components)/
+        // exclude: /(node_modules|bower_components)/
+        exclude: [path.resolve(__dirname, 'node_modules'), path.resolve(__dirname, 'bower_components')]
+
       },
       {
         test: /(\.jsx|\.js)$/,
@@ -45,10 +47,12 @@ const config = {
     ]
   },
   resolve: {
+    symlinks: false,
     modules: [path.resolve('./node_modules'), path.resolve('./src')],
     extensions: ['.json', '.js'],
     alias: {
-      'formio-export': path.resolve(__dirname, 'src/')
+      'formio-export': path.resolve(__dirname, 'src/'),
+      'html2pdf': path.resolve('./node_modules/js-html2pdf')
     }
   },
   externals: {

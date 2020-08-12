@@ -17,13 +17,6 @@ export default (config = {}) => {
       });
       console.log('toPdf', config);
 
-      // let worker = html2pdf().set(config);
-
-      /* worker.from(config.source).toPdf().save().then((pdf) => {
-        console.log('pdf', pdf);
-        resolve(pdf);
-      }); */
-
       Html2Pdf.getPdf(config).then((pdf) => resolve(pdf));
     } catch (error) {
       console.error(error);
