@@ -6,7 +6,6 @@ export default (element, component) => {
   if (component) {
     let componentElement = FormioExportUtils.createElement('div', {
       class: `formio-component ${component.type}-component card after`,
-      style: 'border-collapse: collapse;',
       id: Math.random().toString(36).substring(7)
     });
 
@@ -23,7 +22,6 @@ export default (element, component) => {
     _.forEach(component.rows, (row) => {
 
       let rowComponent = FormioExportUtils.createElement('tr', {
-        style: 'border-collapse: collapse;'
       });
 
       console.log('frow', row);
